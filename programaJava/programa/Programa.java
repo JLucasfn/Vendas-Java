@@ -12,7 +12,6 @@ import utilidades.Pedido;
 import utilidades.Produto;
 import utilidades.enums.MomentoDoPedido;
 
-
 public class Programa{
     public static void main( String [] args) throws ParseException {
 
@@ -25,7 +24,7 @@ public class Programa{
         System.out.print("Digite seu nome: ");
         String nome = sc.nextLine();
         System.out.print("Digite seu email: ");
-        String email = sc.nextLine();
+        String email = sc.next();
         System.out.print("Digite sua data de nascimento (dd/MM/yyyy): ");
         Date nascimento = sdf.parse(sc.next());
         Cliente cliente = new Cliente(nome,email,nascimento);
@@ -40,7 +39,7 @@ public class Programa{
 
         for(int i=1;i <= cont;i++){
             System.out.print("Digite o nome do produto: ");
-            String nomeProduto = sc.next();
+            String nomeProduto = sc.nextLine();
             System.out.print("Digite o valor do produto: R$");
             Double valorDoProduto = sc.nextDouble();
             System.out.print("Digite a quantidade: ");
